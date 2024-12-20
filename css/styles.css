@@ -525,16 +525,24 @@ color: #434455;
 .form-input:focus + .form-icon {
     fill: #4d5ae5}
 
+.form-wrap-cont-comm {
+    margin-bottom: 16px;}
+
 .form-comment {
+    font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        color: rgba(46, 47, 66, 0.4);
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
+    outline: transparent;
     width: 100%;
     min-height: 120px;
     padding: 8px 16px;
     margin-bottom: 15px;
     resize: none;
     outline: none;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
 .form-comment::placeholder {font-weight: 400;
     font-size: 12px;
@@ -543,8 +551,9 @@ color: #434455;
     color: rgba(46, 47, 66, 0.4);}
 
 .form-comment:hover, .form-comment:focus {
-    border: 1px solid #4d5ae5
-}
+    border-color: #4d5ae5}
+
+.checkbox-wrap {margin-bottom: 24px;}
 
 .custom-checkbox-label {
     display: block;
@@ -565,7 +574,8 @@ color: #434455;
     height: 16px;
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
-    margin-right: 8px;} 
+    margin-right: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);} 
 
 .checkbox:checked+.custom-checkbox-label .castom-checkbox {
     fill: #f4f4fd;
