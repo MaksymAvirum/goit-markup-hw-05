@@ -177,9 +177,14 @@ margin-bottom: 16px; }
     color: #fff;}
 
 .footer-sub-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
     border-radius: 4px;
     padding: 8px 24px;
-    width: 165px;
+    min-width: 165px;
     height: 40px; 
     background: #4d5ae5;
     font-weight: 500;
@@ -190,7 +195,8 @@ margin-bottom: 16px; }
     color: #fff;
 }
 
-.footer-sub-button-icon {fill: #fff;}
+.footer-sub-button-icon {fill: #fff;
+    margin-left: 16px;}
 
 /* main open page */
 
@@ -399,6 +405,8 @@ letter-spacing: 0.02em;
 color: #434455; 
 } 
 
+/* modal window */
+
 .modal-overlay {
     background-color: rgba(46, 47, 66, 0.4);
     position: fixed;
@@ -433,23 +441,24 @@ color: #434455;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-           
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
 .close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 24px;
     height: 24px;
+    padding: 0;
+    cursor: pointer;
     border-radius: 50%;
     background-color: #E7E9FC;
-    border-width: 1px;
-    border-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 24px;
     right: 24px;
-    transition: 
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    /* border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
-
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-icon {fill: #2e2f42;
@@ -458,7 +467,7 @@ color: #434455;
 
 .close-btn:hover, .close-btn:focus {
    background-color: #404bbf; 
-   border-color: #404bbf;}
+   border: none;}
 
 .close-btn:hover .close-icon,
 .close-btn:focus .close-icon {
@@ -471,7 +480,9 @@ color: #434455;
     text-align: center;
     color: #2e2f42;
     margin-top: 72px;
-    margin-bottom: 17px;} 
+    margin-bottom: 16px;} 
+
+.form-wrap-cont {margin-bottom: 8px;}
 
 .form-label {
     display: block;
@@ -481,8 +492,6 @@ color: #434455;
         letter-spacing: 0.04em;
         color: #8e8f99;
     margin-bottom: 4px;
-    margin-top: 8px;
-
 }
 
 .form-icon-wrap {
@@ -494,12 +503,13 @@ color: #434455;
         width: 100%;
         height: 40px;
         padding-left: 38px;
-        outline: none;
-        transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        background-color: transparent;
+        outline: transparent;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:hover, .form-input:focus {
-    border: 1px solid #4d5ae5}
+    border-color: #4d5ae5}
 
 .form-icon {
     position: absolute;
